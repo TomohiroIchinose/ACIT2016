@@ -1,0 +1,8 @@
+Modern OSS projects have adopted Git to manage versions of their source code and git hosting services such as GitHub.
+Several hosting services provide a characteristic feature notably Pull Request, and many projects adopt Pull-Based development model by using it.
+Getting acceptance of Pull Request, any developer should strictly follow the flow of pull-based development.
+To follow the flow, she/he needs to use correctly git commands to handle branches and organize commits.
+However, using these commands is complicated and requires further knowledge of them.
+In this paper, we conducted a large-scale survey of 1552 developers on GitHub to investigate the difficulty of the Git from the aspect of Pull Request.
+The result shows developers, who struggle with ‘git rebase -i’ command, tends not to perform re-ordering, compressing and dividing their commits.
+// It means further development of the tool that supports improving their commits in the pull request for novices of Pull-Based development.
