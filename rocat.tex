@@ -2,10 +2,10 @@
 \usepackage{graphicx}
 \usepackage{latexsym}
 \usepackage{enumerate}
-\usepackage{ascmac}
+%\usepackage{ascmac}
 \usepackage{url}
-\usepackage{fancybox}
-\usepackage{subfigure}
+%\usepackage{fancybox}
+%\usepackage{subfigure}
 
 \graphicspath{{./figures/}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
@@ -86,16 +86,16 @@ If we manage to grasp this potential and use it in a way that is consistent with
 Because of that, our aim is to bring software cities reflect real cities in many other ways.
 We want to provide an experience where the software engineer is immersed in the software, exploring it and learning (maybe even subconsciously) about it while walking around, in the same way as one would explore a real city.
 We want to allow the engineer to naturally interact with the information and source code the software has, hoping that such enriched experiences should help in better retention of information, as well as easier comprehension.
-To realize such system, we present a visualization tool, \texttt{ROCAT}, which shows city-like code visualization in virtual reality environment.
+To realize such system, we present a visualization tool, \textit{ROCAT}, which shows city-like code visualization in virtual reality environment.
 
 In addition, we want to introduce the new concept of code visualization, that is, code visualization for communities.
 Previous visualization tools mainly focused on supporting developers, a single developer \cite{Wettel:2011:SSC:1985793.1985868} or a team of developers \cite{6648194}.
 However, we think that visualization should be beneficial for communities too, as we've learned the effectiveness of social coding \cite{Dabbish:2012:SCG:2145204.2145396} and pull-based development \cite{Gousios:2014:ESP:2568225.2568260}.
-To address this challenge, we integrated ROCAT on \texttt{Kataribe},  our code hosting service.
+To address this challenge, we integrated ROCAT on \textit{Kataribe},  our code hosting service.
 With this kind of system, communities can share a large amount of information about the underlying software in a way that is quick and easy to understand.
 
 \section{ROCAT: Software Analytics}
-To support developers comprehend source code and the conditions of projects, we propose \texttt{ROCAT}, where developers can feel the code as a city, and provide richer experiences by enabling exploring the city.
+To support developers comprehend source code and the conditions of projects, we propose \textit{ROCAT}, where developers can feel the code as a city, and provide richer experiences by enabling exploring the city.
 If the information represented on the building (or city) and their meaning is synonymous with the real-world city, it will be easy to quickly retrieve the meaning they carry.
 In this section, we describe the overview and implementation of ROCAT and inform the concept of further usage.
 
@@ -142,8 +142,8 @@ From an empirical study of modern code review, Bacchelli and Bird reports the mo
 To support these outcomes, ROCAT can be helpful, that is, ROCAT can be team collaboration platform too.
 
 \section{Kataribe: Fine-grained Code Hosting}
-\texttt{Kataribe}\footnote{http://kataribe-dev.naist.jp} is a hosting service of Historage repositories \cite{Fujiwara:2014:KHS:2597073.2597125}.
-Historage repositories are fine-grained source code repositories \cite{Hata:2011:HFV:2024445.2024463}, and are converted from file-level Git repositories with a tool, \texttt{Kenja}\footnote{\url{http://github.com/niyaton/kenja}}.
+\textit{Kataribe}\footnote{http://kataribe-dev.naist.jp} is a hosting service of Historage repositories \cite{Fujiwara:2014:KHS:2597073.2597125}.
+Historage repositories are fine-grained source code repositories \cite{Hata:2011:HFV:2024445.2024463}, and are converted from file-level Git repositories with a tool, \textit{Kenja}\footnote{\url{http://github.com/niyaton/kenja}}.
 Kenja constructs a directory structure for the Historage based on the result of syntactic analysis of all source code files in each commit.
 Currently, Kataribe hosts Historage written in C\#, Go, Python and Ruby, since Kenja can only construct on those programming languages.
 Kataribe uses Gitlab, which is a well-known OSS for hosting Git repositories.
