@@ -6,6 +6,7 @@
 \usepackage{url}
 %\usepackage{fancybox}
 %\usepackage{subfigure}
+\usepackage{mediabb}
 
 \graphicspath{{./figures/}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
@@ -71,7 +72,7 @@ Each one having its own purpose, they assist in the understanding of software.
 
 \begin{figure}[h]
 \centering
-\includegraphics[bb=0 0 1598 737, width=13cm]{NewRocat.pdf}
+\includegraphics[width=8cm]{NewRocat.pdf}
 \caption{City-like code visualization}
 \label{figure:new-Rocat}
 \end{figure}
@@ -92,17 +93,17 @@ To realize such system, we present a visualization tool, \textit{Rocat}, which s
 
 \begin{figure*}[t!]
 \centering
-\includegraphics[bb=0 0 1598 937, width=18cm]{Rocat.png}
+\includegraphics[bb=0 0 1598 937, width=18cm]{rocat.png}
 \caption{Snapshot of Rocat}
 \label{figure:Rocat}
 \end{figure*}
 
-\begin{figure*}[t!]
+\begin{figure}[tb]
 \centering
-\includegraphics[bb=0 0 1218 905, width=18cm]{Rocat-on-kataribe.png}
+\includegraphics[width=8cm]{Rocat-on-kataribe2.pdf}
 \caption{Snapshot of Rocat on Kataribe}
 \label{figure:Rocat-on-kataribe}
-\end{figure*}
+\end{figure}
 
 
 In addition, we want to introduce the new concept of code visualization, that is, code visualization for communities.
@@ -191,9 +192,22 @@ Metrics includes in Historage helps user for more in-depth analysis and extend t
 
 % For the further evolution of Rocat on Kataribe, supporting real-time discussion and expressing software evolution could be conceivable.
 
+\begin{figure}[tb]
+\centering
+\includegraphics[width=8cm]{satd.pdf}
+\caption{Visualization for self-admitted technical debt}
+\label{figure:SATD}
+\end{figure}
+
 \section{Discussions and Future Work}
 We strongly believe that visualization is a crucial part of successful software engineering.
 Although currently some topics are separately studied like software analytics, team collaboration, learning/comprehension, knowledge sharing, and so on, we think that visual environment can be the center of these issues.
+We are developing a system using Rocat that visualizes self-admitted technical debt (SATD).
+Technical debt is a metaphor that has been used to express non-optimal solutions of software development, and SATD is a kind of technical debt that is intentionally introduced into source code with keywords such as "TODO" or "FIXME".
+\figref{figure:SATD} shows a screen capture of the system.
+The green ball and orange bubbles are markers of SATD.
+The users can find files that contain SATD without reading source codes and share the information that which file should be done refactoring.
+
 This paper presents code city for multiple software development environments, named Rocat.
 From here on, we continue to develop Rocat for building a new visual software development environment.
 To start with, we also present Rocat on Kataribe for providing software analytics for communities.

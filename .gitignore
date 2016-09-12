@@ -25,5 +25,4 @@
 *.mtc1
 *.out
 *.synctex.gz
-*.pdf
 .DS_Store
