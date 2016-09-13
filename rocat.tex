@@ -6,7 +6,7 @@
 \usepackage{url}
 %\usepackage{fancybox}
 %\usepackage{subfigure}
-%\usepackage{mediabb}
+\usepackage{mediabb}
 
 \graphicspath{{./figures/}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
@@ -74,7 +74,7 @@ Each one having its own purpose, they assist in the understanding of software.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=8cm]{NewRocat.pdf}
+\includegraphics[width=8cm]{NewROCAT.pdf}
 \caption{City-like code visualization}
 \label{figure:new-Rocat}
 \end{figure}
@@ -211,7 +211,7 @@ From here on, we continue to develop Rocat for building a new visual software de
 To start with, we also present Rocat on Kataribe for providing software analytics for communities.
 
 Now we are developing a system using Rocat that visualizes self-admitted technical debt (SATD).
-Technical debt is a metaphor that has been used to express non-optimal solutions of software development, and SATD is a kind of technical debt that is intentionally introduced into source code with keywords such as "TODO" or "FIXME".
+Technical debt is a metaphor that has been used to express non-optimal solutions of software development, and SATD is a kind of technical debt that is intentionally introduced into source code with keywords such as "TODO" or "FIXME"\cite{6976075}.
 \figref{figure:SATD} shows a screen capture of the system.
 The green ball and orange bubbles are markers of SATD.
 The users can find files that contain SATD without reading source codes and share the information that which file should be done refactoring.
