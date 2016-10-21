@@ -7,6 +7,7 @@
 %\usepackage{fancybox}
 %\usepackage{subfigure}
 \usepackage{mediabb}
+\usepackage{color}
 
 \graphicspath{{./figures/}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
@@ -116,10 +117,11 @@ In this section, we describe the overview and implementation of Rocat and inform
 Rocat is a visualization tool that can be applied to multiple software development environments.
 \figref{figure:Rocat} presents the snapshot of Rocat view.
 Similar to the CodeCity \cite{Wettel:2011:SSC:1985793.1985868}, extracted metrics are mapped on the hight and the base size of buildings.
+\textcolor{blue}{The height means LOC and the base size means the number of comments of the source code in current system.}
 Users can explore the city among buildings.
 When one building is selected (red building in the figure), its source code can be available on demand.
 It is possible to edit this source code with this view.
-The color of the building describes the top contributor of the file corresponds to the building.
+The color of the building describes the top contributor of the file corresponds to the building \textcolor{blue}{(the color of each contributor is selected randomly)}.
 These color can be used to find out who understand and has a responsible for certain source code file.
 
 Although CodeMetropolis is realized on top of an attractive popular role-playing game, Minecraft\footnote{\url{https://minecraft.net/}} \cite{6648194}, we have started implementation using a cross-platform game engine, Unity\footnote{\url{https://unity3d.com/}}.
@@ -215,7 +217,7 @@ Technical debt is a metaphor that has been used to express non-optimal solutions
 \figref{figure:SATD} shows a screen capture of the system.
 The green ball and orange bubbles are markers of SATD.
 The users can find files that contain SATD without reading source codes and share the information that which file should be done refactoring.
-
+\textcolor{blue}{We would like to evaluate the system by interview of OSS developers, and analyzing repositories before and after introduction of the system into development.}
 
 \section*{Acknowledgment}
 This work has been supported by JSPS KAKENHI Grant Number 16H05857 and JSPS Program for Advancing Strategic International Networks to Accelerate the Circulation of Talented Researchers: Interdisciplinary Global Networks for Accelerating Theory and Practice in Software Ecosystem (G2603).
