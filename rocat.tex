@@ -204,13 +204,6 @@ Metrics includes in Historage helps user for more in-depth analysis and extend t
 \label{figure:SATD}
 \end{figure*}
 
-\begin{figure}[tb]
-\centering
-\includegraphics[width=\linewidth]{ogami.pdf}
-\caption{RocatDebugger visualization for call graph}
-\label{figure:Debugger}
-\end{figure}
-
 \section{Discussions and Future Work}
 We strongly believe that visualization is a crucial part of successful software engineering.
 Although currently some topics are separately studied like software analytics, team collaboration, learning/comprehension, knowledge sharing, and so on, we think that visual environment can be the center of these issues.
@@ -226,11 +219,11 @@ The green ball and orange bubbles are markers of SATD.
 The users can find files that contain SATD without reading source codes and share the information that which file should be done refactoring.
 We would like to evaluate our system with the interview of OSS developers, and analyze their repositories to see the changes after introducing the system into development.
 
-
-Furthermore, we are developing "RocatDebugger" that visualizes Java programs' call graph and stack traces in real time.
-\figref{figure:Debugger} shows a screen capture of RocatDebugger.
-RocatDebugger is implemented as an Eclipse plugin, and assists developers to understand programs' behavior in debug.
-We would like to evaluate it with questionnaire and task of program comprehension for developers.
+Furthermore, Rocat can visualize the relationship of source code with the program structure at the same time.
+For example, in the case of the call graph visualization, 2D visualization can represent the relationship by using nodes and edges, but it is difficult to visualize other metrics clearly on one window.
+On the other hand, Rocat can visualize the relationship like the bridge between buildings.
+The developers can understand the call graph and the program structure at the same time.
+This approach will be able to accelerate the debug task.
 
 
 \section*{Acknowledgment}
