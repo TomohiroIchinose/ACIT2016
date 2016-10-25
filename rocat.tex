@@ -66,10 +66,10 @@ If the software for a space shuttle 30 years ago was 400,000 lines of code, nowa
 Not only the size of software increased in terms of LOC, but the integration and interaction with external services dramatically increased.
 With the increase of size and complexity, it gets more and more difficult to comprehend the structure and analytics of software, especially without a good way to visualize the information.
 
-One good way to represent the software structure, size, and modularity is \textit{CodeCity} \cite{Wettel:2011:SSC:1985793.1985868}, representing classes as buildings, and packages as districts in 3D, synonymous to a city.
-Since the original \textit{CodeCity} does not offer a great number of interactions a developer can do with the city, there has been some work to extend it.
-One interesting approach is \textit{CodeMetropolis} \cite{6648194}, where they represent software cities in \textit{Minecraft}, allowing for better collaboration within the \textit{Minecraft} game.
-Showing similar data as \textit{CodeCity}, \textit{CodeMetropolis} allows the user to walk around the city and interact closely with the buildings (that is the source code).
+One good way to represent the software structure, size, and modularity is \textsf{CodeCity} \cite{Wettel:2011:SSC:1985793.1985868}, representing classes as buildings, and packages as districts in 3D, synonymous to a city.
+Since the original \textsf{CodeCity} does not offer a great number of interactions a developer can do with the city, there has been some work to extend it.
+One interesting approach is \textsf{CodeMetropolis} \cite{6648194}, where they represent software cities in \textsf{Minecraft}, allowing for better collaboration within the \textsf{Minecraft} game.
+Showing similar data as \textsf{CodeCity}, \textsf{CodeMetropolis} allows the user to walk around the city and interact closely with the buildings (that is the source code).
 The same representation has also been used to specifically represent the development history using a bird-eye view of the city \cite{Steinbruckner:2010:RDH:1879211.1879239}.
 Each one having its own purpose, they assist in the understanding of software.
 
@@ -92,12 +92,12 @@ If we manage to grasp this potential and use it in a way that is consistent with
 Because of that, our aim is to bring software cities reflect real cities in many other ways.
 We want to provide an experience where the software engineer is immersed in the software, exploring it and learning (maybe even subconsciously) about it while walking around, in the same way as one would explore a real city.
 We want to allow the engineer to naturally interact with the information and source code the software has, hoping that such enriched experiences should help in better retention of information, as well as easier comprehension.
-To realize such system, we present a visualization tool, \textit{Rocat}, which shows city-like code visualization in virtual reality environment.
+To realize such system, we present a visualization tool, \textsf{Rocat}, which shows city-like code visualization in virtual reality environment.
 
 \begin{figure*}[t!]
 \centering
 \includegraphics[bb=0 0 1598 937, width=18cm]{rocat.png}
-\caption{Snapshot of \textit{Rocat}}
+\caption{Snapshot of \textsf{Rocat}}
 \label{figure:Rocat}
 \end{figure*}
 
@@ -105,18 +105,18 @@ To realize such system, we present a visualization tool, \textit{Rocat}, which s
 In addition, we would like to introduce the new concept of code visualization, \textit{code visualization for communities}.
 Previous visualization tools mainly focused on supporting developers, a single developer \cite{Wettel:2011:SSC:1985793.1985868} or a team of developers \cite{6648194}.
 However, we think that visualization should be beneficial for communities too, as we've learned the effectiveness of social coding \cite{Dabbish:2012:SCG:2145204.2145396} and pull-based development \cite{Gousios:2014:ESP:2568225.2568260}.
-To address this challenge, we integrated \textit{Rocat} visualization system on \textit{Kataribe},  our code hosting service.
+To address this challenge, we integrated \textsf{Rocat} visualization system on \textsf{Kataribe},  our code hosting service.
 With this kind of system, communities can share a large amount of information about the underlying software in a way that is quick and easy to understand.
 
 \section{Rocat: Software Visualization}
-To support developers comprehend source code and the conditions of projects, we propose \textit{Rocat}, where developers can feel the code as a city, and provide richer experiences by enabling exploring the city.
+To support developers comprehend source code and the conditions of projects, we propose \textsf{Rocat}, where developers can feel the code as a city, and provide richer experiences by enabling exploring the city.
 If the information represented on the building (or city) and their meaning is synonymous with the real-world city, it will be easy to quickly retrieve the meaning they carry.
-In this section, we describe the overview and implementation of \textit{Rocat} and inform the concept of further usage.
+In this section, we describe the overview and implementation of \textsf{Rocat} and inform the concept of further usage.
 
 \subsection{Overview and Implementation}
-\textit{Rocat} is a visualization tool that can be applied to multiple software development environments.
-\figref{figure:Rocat} presents the snapshot of \textit{Rocat} view.
-Similar to the \textit{CodeCity} \cite{Wettel:2011:SSC:1985793.1985868}, extracted metrics are mapped on the hight and the base size of buildings.
+\textsf{Rocat} is a visualization tool that can be applied to multiple software development environments.
+\figref{figure:Rocat} presents the snapshot of \textsf{Rocat} view.
+Similar to the \textsf{CodeCity} \cite{Wettel:2011:SSC:1985793.1985868}, extracted metrics are mapped on the hight and the base size of buildings.
 The height represents LOC and the base size represents the number of comments of the source code in current system.
 Users can explore the city among buildings.
 When one building is selected (red building in the figure), its source code can be available on demand.
@@ -124,17 +124,17 @@ It is possible to edit this source code with this view.
 The color of the building describes the top contributor of the file corresponds to the building (the color of each contributor is selected randomly.)
 These color can be used to find out who understand and has a responsible for certain source code file.
 
-Although \textit{CodeMetropolis} is realized on top of an attractive popular role-playing game, \textit{Minecraft}\footnote{\url{https://minecraft.net/}} \cite{6648194}, we have started implementation using a cross-platform game engine, \textit{Unity}\footnote{\url{https://unity3d.com/}}.
-This is because we want not to limit \textit{Rocat} to specific purposes, and want to develop general software development platform in the future.
-By using \textit{Unity}, \textit{Rocat} can be run on a web browser or any platform and can adopt \textit{Oculus Rift} to see \textit{Rocat} in virtual reality.
+Although \textsf{CodeMetropolis} is realized on top of an attractive popular role-playing game, \textsf{Minecraft}\footnote{\url{https://minecraft.net/}} \cite{6648194}, we have started implementation using a cross-platform game engine, \textsf{Unity}\footnote{\url{https://unity3d.com/}}.
+This is because we want not to limit \textsf{Rocat} to specific purposes, and want to develop general software development platform in the future.
+By using \textsf{Unity}, \textsf{Rocat} can be run on a web browser or any platform and can adopt \textsf{Oculus Rift} to see \textsf{Rocat} in virtual reality.
 
-\textit{Rocat} is not the only visualization but intends to a novel software development environment.
+\textsf{Rocat} is not the only visualization but intends to a novel software development environment.
 We describe our concept with the following related approach.
 
 \begin{figure*}[tb]
 \centering
 \includegraphics[width=\linewidth]{Rocat-on-kataribe2.pdf}
-\caption{Snapshot of \textit{Rocat} on \textit{Kataribe}}
+\caption{Snapshot of \textsf{Rocat} on \textsf{Kataribe}}
 \label{figure:Rocat-on-kataribe}
 \end{figure*}
 
@@ -144,56 +144,56 @@ We describe our concept with the following related approach.
 A virtual museum is a digital entity that draws on the characteristics of a museum, in order to complement, enhance, or augment the museum
 experience through personalization, interactivity and richness of content\footnote{\url{https://en.wikipedia.org/wiki/Virtual_museum}}.
 Storytelling is one of the aims of virtual museums, which intends to make cultural content more attractive for the public and, consequently, the leaning process easier \cite{Pietroni:2014:IVR:2635823.2611375}.
-This aim is also important for \textit{Rocat}.
+This aim is also important for \textsf{Rocat}.
 
 \subsubsection{Web Maps}
-Web maps like \textit{Google Maps}\footnote{\url{https://maps.google.com/}} are indispensable for exploring real world cities.
+Web maps like \textsf{Google Maps}\footnote{\url{https://maps.google.com/}} are indispensable for exploring real world cities.
 Among various useful features, a zooming feature is one of basic and essential one to comprehend the structure of cities.
-\textit{Rocat} provides hierarchical views from a bird-eye view to an exploring view.
+\textsf{Rocat} provides hierarchical views from a bird-eye view to an exploring view.
 From bird-eye views, we can glance the characteristics of entire or part of projects.
 With exploring views, we can investigate each building with considering neighbors.
 
 \subsubsection{Visual Software Analytics Platform}
-Software analytics is analytics on software data for managers and software engineers with the aim of empowering software development individuals and teams to gain and share insight from their data to make better decisions \cite{Menzies:2013:SAS:2553351.2553360} \textit{SAMOA} is a visual software analytics platform \cite{6676936}.
-As a software development environment, \textit{Rocat} also needs to help decision making, that is, \textit{Rocat} can be a visual software analytics system too.
-\textit{SAMOA} is 2D system and has different views: a snapshot view, an evolution view, and an ecosystem view.
+Software analytics is analytics on software data for managers and software engineers with the aim of empowering software development individuals and teams to gain and share insight from their data to make better decisions \cite{Menzies:2013:SAS:2553351.2553360} \textsf{SAMOA} is a visual software analytics platform \cite{6676936}.
+As a software development environment, \textsf{Rocat} also needs to help decision making, that is, \textsf{Rocat} can be a visual software analytics system too.
+\textsf{SAMOA} is 2D system and has different views: a snapshot view, an evolution view, and an ecosystem view.
 Introducing these kinds of views in 3D environments might be helpful.
 
 \subsubsection{Team Collaboration Platform}
 From an empirical study of modern code review, Bacchelli and Bird reports the motivations of code review \cite{Bacchelli:2013:EOC:2486788.2486882}. While finding defects remain the main motivation, reviewers also expect additional benefits such as knowledge transfer, increased team awareness, sharing code ownership, and so on.
-To support these outcomes, \textit{Rocat} can be helpful, that is, \textit{Rocat} can be team collaboration platform too.
+To support these outcomes, \textsf{Rocat} can be helpful, that is, \textsf{Rocat} can be team collaboration platform too.
 
 \section{Kataribe: Fine-grained Code Hosting}
-\textit{Kataribe}\footnote{http://sdlab.naist.jp/kataribe/} is a hosting service of \textit{Historage} repositories \cite{Fujiwara:2014:KHS:2597073.2597125}.
-\textit{Historage} repositories are fine-grained source code repositories \cite{Hata:2011:HFV:2024445.2024463}, and are converted from file-level Git repositories with a tool, \textit{Kenja}\footnote{\url{http://github.com/niyaton/kenja}}.
-\textit{Kenja} constructs a directory structure for the \textit{Historage} based on the result of syntactic analysis of all source code files in each commit.
-Currently, \textit{Kataribe} hosts \textit{Historage} written in C\#, Go, Python and Ruby, since \textit{Kenja} can only construct on those programming languages.
-\textit{Kataribe} uses \textit{Gitlab}, which is a well-known OSS for hosting Git repositories.
-Users can get \textit{Historage} repositories from \textit{Kataribe} without registration.
-Registration at \textit{Kataribe} enables users to browse \textit{Historage} repositories on the web.
-\textit{Gitlab} enables users to see logs and graphical statics of repositories.
+\textsf{Kataribe}\footnote{http://sdlab.naist.jp/kataribe/} is a hosting service of \textsf{Historage} repositories \cite{Fujiwara:2014:KHS:2597073.2597125}.
+\textsf{Historage} repositories are fine-grained source code repositories \cite{Hata:2011:HFV:2024445.2024463}, and are converted from file-level Git repositories with a tool, \textsf{Kenja}\footnote{\url{http://github.com/niyaton/kenja}}.
+\textsf{Kenja} constructs a directory structure for the \textsf{Historage} based on the result of syntactic analysis of all source code files in each commit.
+Currently, \textsf{Kataribe} hosts \textsf{Historage} written in C\#, Go, Python and Ruby, since \textsf{Kenja} can only construct on those programming languages.
+\textsf{Kataribe} uses \textsf{Gitlab}, which is a well-known OSS for hosting Git repositories.
+Users can get \textsf{Historage} repositories from \textsf{Kataribe} without registration.
+Registration at \textsf{Kataribe} enables users to browse \textsf{Historage} repositories on the web.
+\textsf{Gitlab} enables users to see logs and graphical statics of repositories.
 
-Features of \textit{Kataribe} include importing existing Git repositories that are provided on Git hosting services such as \textit{Github} and also constructing \textit{Historage} repositories incrementally.
-Since a \textit{Historage} repository created by \textit{Kenja} is separated from the original repositories, users of \textit{Kataribe} can continue their development regardless of their \textit{Historage} repositories.
-When developer pushes her/his commits into their original repositories, \textit{Kataribe} automatically converts pushed commits into the corresponding \textit{Historage} repositories.
+Features of \textsf{Kataribe} include importing existing Git repositories that are provided on Git hosting services such as \textsf{Github} and also constructing \textsf{Historage} repositories incrementally.
+Since a \textsf{Historage} repository created by \textsf{Kenja} is separated from the original repositories, users of \textsf{Kataribe} can continue their development regardless of their \textsf{Historage} repositories.
+When developer pushes her/his commits into their original repositories, \textsf{Kataribe} automatically converts pushed commits into the corresponding \textsf{Historage} repositories.
 These features allow researchers to get latest fine-grained histories when they want to start their new research.
 
 \section{Rocat on Kataribe}
-We are integrating \textit{Rocat} into \textit{Kataribe} to provide software analytics for the community.
-\figref{figure:Rocat-on-kataribe} shows a screen capture of \textit{Rocat} on \textit{Kataribe}.
+We are integrating \textsf{Rocat} into \textsf{Kataribe} to provide software analytics for the community.
+\figref{figure:Rocat-on-kataribe} shows a screen capture of \textsf{Rocat} on \textsf{Kataribe}.
 %Kataribe provides Rocat page, which can be seen by pressing the tab button seen in the upper menu, for each repository.
 %The bottom half shows the current source code which corresponds with building selected by the user.
-With Web browsers, users can see \textit{Rocat} visualizations. In addition, source code of a selected module is available on the same web page.
+With Web browsers, users can see \textsf{Rocat} visualizations. In addition, source code of a selected module is available on the same web page.
 
-\textit{Rocat} on \textit{Kataribe} runs by \textit{Unity Web Player}\footnote{http://unity3d.com/webplayer}, one of the supported platform by \textit{Unity} for executing the project on a Web browser.
-The metrics data for constructing the building are managed on \textit{Kataribe}, so updating the city and each building can be easily performed.
-In addition, data and source code shown by \textit{Rocat} are always updated to the newest version.
+\textsf{Rocat} on \textsf{Kataribe} runs by \textsf{Unity Web Player}\footnote{http://unity3d.com/webplayer}, one of the supported platform by \textsf{Unity} for executing the project on a Web browser.
+The metrics data for constructing the building are managed on \textsf{Kataribe}, so updating the city and each building can be easily performed.
+In addition, data and source code shown by \textsf{Rocat} are always updated to the newest version.
 
-Since \textit{Kataribe} uses \textit{Gitlab}, not only developers but also user without registration are able to look through the overview of the project by \textit{Rocat}.
+Since \textsf{Kataribe} uses \textsf{Gitlab}, not only developers but also user without registration are able to look through the overview of the project by \textsf{Rocat}.
 This characteristic of sharing visualization in public differs from the prior studies and tools which targeted single developer or project team.
-Also, integrating \textit{Rocat} to source code hosting service, the user no need to care about doing extra work to share the visualization and can concentrate on their work.
-To make better use of \textit{Kataribe}, using the \textit{Historage} metrics to construct the building can be done.
-Metrics includes in \textit{Historage} helps user for more in-depth analysis and extend the possibilities for more understandable visualization.
+Also, integrating \textsf{Rocat} to source code hosting service, the user no need to care about doing extra work to share the visualization and can concentrate on their work.
+To make better use of \textsf{Kataribe}, using the \textsf{Historage} metrics to construct the building can be done.
+Metrics includes in \textsf{Historage} helps user for more in-depth analysis and extend the possibilities for more understandable visualization.
 
 % For the further evolution of Rocat on Kataribe, supporting real-time discussion and expressing software evolution could be conceivable.
 
@@ -208,27 +208,27 @@ Metrics includes in \textit{Historage} helps user for more in-depth analysis and
 We strongly believe that visualization is a crucial part of successful software engineering.
 Although currently some topics are separately studied like software analytics, team collaboration, learning/comprehension, knowledge sharing, and so on, we think that visual environment can be the center of these issues.
 
-This paper presents code city for multiple software development environments, named \textit{Rocat}.
-From here on, we continue to develop \textit{Rocat} for building a new visual software development environment.
-To start with, we also present \textit{Rocat} on \textit{Kataribe} for providing software analytics for communities.
+This paper presents code city for multiple software development environments, named \textsf{Rocat}.
+From here on, we continue to develop \textsf{Rocat} for building a new visual software development environment.
+To start with, we also present \textsf{Rocat} on \textsf{Kataribe} for providing software analytics for communities.
 
-Now we are developing a system using \textit{Rocat} that visualizes self-admitted technical debt (SATD).
+Now we are developing a system using \textsf{Rocat} that visualizes self-admitted technical debt (SATD).
 Technical debt is a metaphor that has been used to express non-optimal solutions of software development, and SATD is a kind of technical debt that is intentionally introduced into source code with keywords such as "TODO" or "FIXME"\cite{6976075}.
 \figref{figure:SATD} shows a screen capture of the system.
 The green ball and orange bubbles are markers of SATD.
 The users can find files that contain SATD without reading source codes and share the information that which file should be done refactoring.
 We would like to evaluate our system with the interview of OSS developers, and analyze their repositories to see the changes after introducing the system into development.
 
-Furthermore, \textit{Rocat} can visualize the relationship among source code with program structures at the same time.
+Furthermore, \textsf{Rocat} can visualize the relationship among source code with program structures at the same time.
 For example, in the case of call graph visualization, 2D visualization can represent the relationship by using nodes and edges, but it is difficult to visualize other metrics clearly on the same view.
-On the other hand, \textit{Rocat} can visualize such a relationship with a bridge between buildings.
+On the other hand, \textsf{Rocat} can visualize such a relationship with a bridge between buildings.
 Developers can understand call graph and program structure at the same time.
 This approach will be able to accelerate debug task, for example.
 
 
 \section*{Acknowledgment}
 This work has been supported by JSPS KAKENHI Grant Number 16H05857 and JSPS Program for Advancing Strategic International Networks to Accelerate the Circulation of Talented Researchers: Interdisciplinary Global Networks for Accelerating Theory and Practice in Software Ecosystem (G2603).
-We would like to thank Yusuke Saito and Shin Fujiwara for their initial work on \textit{Rocat}, and Takao Nakagawa and Stevche Radevski for their suggestions and advices.
+We would like to thank Yusuke Saito and Shin Fujiwara for their initial work on \textsf{Rocat}, and Takao Nakagawa and Stevche Radevski for their suggestions and advices.
 
 
 
